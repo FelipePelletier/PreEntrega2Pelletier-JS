@@ -78,3 +78,20 @@ function alumnosAprobados() {
 
   alert(mensaje);
 }
+
+function alumnosDesaprobados() {
+  const desaprobados = alumnos.filter((estudiante) => estudiante.promedio < 5);
+
+  let mensaje = "Estudiantes desaprobados: \n\n";
+  if (desaprobados.length > 0) {
+    desaprobados.forEach((estudiante) => {
+      mensaje += `-Nombre: ${estudiante.nombre}\n`;
+      mensaje += ` Notas: ${estudiante.notas.join(" y ")}\n`;
+      mensaje += ` Promedio: ${estudiante.promedio}\n\n`;
+    });
+  } else {
+    mensaje += "No hay estudiantes desaprobados.";
+  }
+
+  alert(mensaje);
+}
