@@ -61,3 +61,20 @@ function calcularPromedio(notas) {
   const suma = notas.reduce((acumulador, nota) => acumulador + nota, 0);
   return suma / notas.length;
 }
+
+function alumnosAprobados() {
+  const aprobados = alumnos.filter((estudiante) => estudiante.promedio >= 5);
+
+  let mensaje = "Estudiantes aprobados: \n\n";
+  if (aprobados.length > 0) {
+    aprobados.forEach((estudiante) => {
+      mensaje += `-Nombre: ${estudiante.nombre}\n`;
+      mensaje += ` Notas: ${estudiante.notas.join(" y ")}\n`;
+      mensaje += ` Promedio: ${estudiante.promedio}\n\n`;
+    });
+  } else {
+    mensaje += "No hay estudiantes aprobados.";
+  }
+
+  alert(mensaje);
+}
