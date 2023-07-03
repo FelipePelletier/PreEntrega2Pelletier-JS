@@ -13,3 +13,19 @@ const opciones = {
 
 const letrasRegex = /^[a-zA-Z\s]+$/;
 const numerosRegex = /^\d+$/;
+
+while (menu) {
+  const opcion = prompt(
+    `Elige una opcion:
+        1. Agregar alumno
+        2. Alumnos aprobados
+        3. Alumnos desaprobados
+        4. Salir`
+  );
+
+  if (opciones[opcion]) {
+    opciones[opcion]();
+  } else {
+    alert("Opcion invalida. Por favor seleccione una opcion valida");
+  }
+}
