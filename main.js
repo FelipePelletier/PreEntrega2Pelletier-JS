@@ -2,6 +2,7 @@ const alumnos = [];
 
 let menu = true;
 
+//Menu para el usuario
 const opciones = {
   1: agregarAlumno,
   2: alumnosAprobados,
@@ -11,6 +12,7 @@ const opciones = {
   },
 };
 
+//Constantes para que solo permita ingresar letras para los nombres, y numeros para las notas.
 const letrasRegex = /^[a-zA-Z\s]+$/;
 const numerosRegex = /^\d+$/;
 
